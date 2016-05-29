@@ -1,11 +1,14 @@
 package android.com.futsalbooking;
 
 import android.com.futsalbooking.adapter.MenuAdapter;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.Arrays;
@@ -18,6 +21,7 @@ public class MainActivityFragment extends Fragment {
     public MainActivityFragment() {
     }
 
+    private final String LOG_TAG = MainActivityFragment.class.getSimpleName();
     private MenuAdapter menuAdapter;
 
     Menu[] menus = {
@@ -40,6 +44,26 @@ public class MainActivityFragment extends Fragment {
         // Get a reference to the ListView, and attach this adapter to it.
         GridView gridView = (GridView) rootView.findViewById(R.id.menus_grid);
         gridView.setAdapter(menuAdapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Menu menu = menuAdapter.getItem(position);
+
+
+                String menuName = menu.menuName;
+                try {
+                    Intent intent = new Intent(getActivity(), Class.forName(
+                            "android.com.futsalbooking."
+                            + menuName
+                    ));
+                    startActivity(intent);
+                } catch (ClassNotFoundException e) {
+                    Log.e(LOG_TAG, menu.menuName + " class not found exception");
+                }
+
+            }
+        });
 
         return rootView;
     }

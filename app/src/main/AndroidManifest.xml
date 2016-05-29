@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Booking"
+            android:label="@string/title_activity_booking"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.com.futsalbooking.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
