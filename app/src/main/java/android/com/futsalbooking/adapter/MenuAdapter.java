@@ -18,9 +18,9 @@ import java.util.List;
 public class MenuAdapter extends ArrayAdapter<Menu> {
     private static final String LOG_TAG = MenuAdapter.class.getSimpleName();
 
-    public MenuAdapter(Activity context, List<Menu> androidFlavors) {
+    public MenuAdapter(Activity context, List<Menu> menus) {
 
-        super(context, 0, androidFlavors);
+        super(context, 0, menus);
     }
 
     @Override
