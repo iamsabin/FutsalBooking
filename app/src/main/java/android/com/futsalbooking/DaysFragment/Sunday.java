@@ -19,9 +19,9 @@ public class Sunday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.sunday, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_days_booking, container, false);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.listview_sunday);
+        ListView listView = (ListView) rootView.findViewById(R.id.listview_daily_booking);
 
         DailyBooking[] dailyBooking = {
                 new DailyBooking(R.drawable.tournament, "8-9", "UserName"),
