@@ -1,6 +1,7 @@
 package android.com.futsalbooking;
 
 import android.com.futsalbooking.adapter.MenuAdapter;
+import android.com.futsalbooking.objects.Menu;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -55,7 +56,7 @@ public class MainActivityFragment extends Fragment {
                 try {
                     Intent intent = new Intent(getActivity(), Class.forName(
                             "android.com.futsalbooking."
-                            + menuName
+                            + menuName + "Activity"
                     ));
                     startActivity(intent);
                 } catch (ClassNotFoundException e) {

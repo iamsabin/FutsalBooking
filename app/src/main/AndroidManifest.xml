@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.com.futsalbooking" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Booking"
+            android:name=".BookingActivity"
             android:label="@string/title_activity_booking"
             android:parentActivityName=".MainActivity">
             <meta-data
