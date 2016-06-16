@@ -1,27 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:orientation="vertical"
-    android:background="@drawable/border">
+    android:id="@+id/linear1"
+    android:background="@drawable/bg4"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:baselineAligned="true">
+
 
     <ImageView
-        android:id="@+id/grid_item_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_margin="8dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/bg4"
+        android:src="@mipmap/booking_edit"
+        android:cropToPadding="true"
+        android:scaleType="fitStart"
+        android:tint="@android:color/transparent"
+        android:adjustViewBounds="true"
+        android:clickable="true" />
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="116dp"
+      android:id="@+id/imageButton2"
+      android:scaleType="fitEnd"
+      android:src="@mipmap/calendar_edit"
+      android:adjustViewBounds="true"
+      android:tint="@android:color/transparent"
+      android:layout_alignLeft="@+id/imageButton"
+      android:clickable="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:id="@+id/imageButton3"
+        android:layout_below="@+id/imageButton"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/bg4"
+        android:scaleType="fitStart"
+        android:tint="@android:color/transparent"
+        android:cropToPadding="true"
+        android:src="@mipmap/tournament_edit"
+        android:adjustViewBounds="true"
+        android:clickable="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:id="@+id/imageButton4"
+        android:layout_below="@+id/imageButton2"
+        android:layout_marginTop="65dp"
+        android:tint="@android:color/transparent"
+        android:scaleType="fitEnd"
+        android:cropToPadding="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/challenge_edit2"
+        android:paddingRight="5dp"
+        android:layout_above="@+id/imageButton5"
+        android:clickable="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:id="@+id/imageButton5"
+        android:layout_below="@+id/imageButton3"
+        android:tint="@android:color/transparent"
+        android:layout_marginTop="65dp"
+        android:scaleType="fitStart"
+        android:src="@mipmap/fixtures_edit"
+        android:background="@drawable/bg4"
+        android:cropToPadding="true"
+        android:adjustViewBounds="true"
+        android:clickable="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:id="@+id/imageButton6"
+        android:layout_below="@+id/imageButton4"
+        android:tint="@android:color/transparent"
+        android:layout_marginTop="65dp"
+        android:scaleType="fitEnd"
+        android:src="@mipmap/news_edit"
+        android:cropToPadding="true"
+        android:adjustViewBounds="true"
+        android:clickable="true" />
+</RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/grid_item_menu_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="Booking"
-        android:layout_margin="8dp"/>
 
 
-</LinearLayout>
+
+
+
+
+
