@@ -111,7 +111,7 @@ public class BookingActivity extends ActionBarActivity implements
             String format = "json";
 
             try {
-                final String TIME_ZONE_DB_API_KEY = "";
+                final String TIME_ZONE_DB_API_KEY = "OQD39NMIAXC0";
 
                 final String TIME_ZONE_BASE_URL =
                         "http://api.timezonedb.com/?";

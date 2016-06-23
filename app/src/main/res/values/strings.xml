@@ -2,4 +2,13 @@
     <string name="app_name">FutsalBooking</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_booking">Booking</string>
+
+    <string name="book_date">08/07/2016</string>
+    <string name="booking_time">8-9</string>
+    <string name="booking_user_name">UserName</string>
+    <string name="title_activity_confirm">ConfirmActivity</string>
+
+    <string name="time_available_text_view">Available Time</string>
+    <string name="username">Username</string>
+    <string name="confirm_book_button">Confirm</string>
 </resources>

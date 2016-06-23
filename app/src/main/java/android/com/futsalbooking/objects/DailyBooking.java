@@ -6,10 +6,8 @@ package android.com.futsalbooking.objects;
 public class DailyBooking {
     public String time;
     public String username;
-    public boolean condition;
 
-    public DailyBooking(boolean condition, String time, String username) {
-        this.condition = condition;
+    public DailyBooking(String time, String username) {
         this.time = time;
         this.username = username;
     }

@@ -1,8 +1,11 @@
 package android.com.futsalbooking.adapter;
 
 import android.app.Activity;
+import android.com.futsalbooking.ConfirmActivity;
 import android.com.futsalbooking.objects.DailyBooking;
 import android.com.futsalbooking.R;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +20,11 @@ import java.util.List;
  */
 public class DailyBookingAdapter extends ArrayAdapter<DailyBooking> {
     private static final String LOG_TAG = DailyBookingAdapter.class.getSimpleName();
+//    Activity context;
 
     public DailyBookingAdapter(Activity context, List<DailyBooking> dailyBookings) {
         super(context, 0, dailyBookings);
+//        this.context = context;
     }
 
     @Override
@@ -32,11 +37,21 @@ public class DailyBookingAdapter extends ArrayAdapter<DailyBooking> {
         }
         ImageView iconView = (ImageView) convertView.findViewById(R.id.list_item_book_imageview);
 
-        if(dailyBooking.condition) {
+        if(dailyBooking.username == null) {
             iconView.setImageResource(R.drawable.book_open);
         } else {
             iconView.setImageResource(R.drawable.book_close);
         }
+
+//        CardView cardView = (CardView) convertView.findViewById(R.id.card_view_booking_list);
+//
+//        cardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, ConfirmActivity.class);
+//                context.startActivity(intent);
+//            }
+//        });
 
         TextView timeTextView = (TextView) convertView.findViewById(R.id.list_item_book_time_textview);
         timeTextView.setText(dailyBooking.time);
