@@ -1,7 +1,7 @@
 package android.com.futsalbooking.adapter;
 
 import android.app.Activity;
-import android.com.futsalbooking.Menu;
+import android.com.futsalbooking.objects.Menu;
 import android.com.futsalbooking.R;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,10 +1,8 @@
 package android.com.futsalbooking.adapter;
 
 import android.app.Activity;
-import android.com.futsalbooking.DailyBooking;
-import android.com.futsalbooking.Menu;
+import android.com.futsalbooking.objects.DailyBooking;
 import android.com.futsalbooking.R;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +19,6 @@ public class DailyBookingAdapter extends ArrayAdapter<DailyBooking> {
     private static final String LOG_TAG = DailyBookingAdapter.class.getSimpleName();
 
     public DailyBookingAdapter(Activity context, List<DailyBooking> dailyBookings) {
-
         super(context, 0, dailyBookings);
     }
 
@@ -33,9 +30,13 @@ public class DailyBookingAdapter extends ArrayAdapter<DailyBooking> {
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item_daily_booking, parent, false);
         }
-
         ImageView iconView = (ImageView) convertView.findViewById(R.id.list_item_book_imageview);
-        iconView.setImageResource(dailyBooking.imageID);
+
+        if(dailyBooking.condition) {
+            iconView.setImageResource(R.drawable.book_open);
+        } else {
+            iconView.setImageResource(R.drawable.book_close);
+        }
 
         TextView timeTextView = (TextView) convertView.findViewById(R.id.list_item_book_time_textview);
         timeTextView.setText(dailyBooking.time);

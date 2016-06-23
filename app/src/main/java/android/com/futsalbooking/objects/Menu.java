@@ -1,4 +1,4 @@
-package android.com.futsalbooking;
+package android.com.futsalbooking.objects;
 
 /**
  * Created by Sabin-HP on 5/29/2016.
