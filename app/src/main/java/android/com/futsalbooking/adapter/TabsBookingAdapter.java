@@ -17,7 +17,7 @@ public class TabsBookingAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-    Long unixTimeStamp;
+    public static Long unixTimeStamp;
 
     @Override
     public Fragment getItem(int index) {

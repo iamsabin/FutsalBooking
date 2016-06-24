@@ -11,4 +11,6 @@
     <string name="time_available_text_view">Available Time</string>
     <string name="username">Username</string>
     <string name="confirm_book_button">Confirm</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_fixtures">FixturesActivity</string>
 </resources>
